@@ -5,12 +5,14 @@ class MyButton extends StatelessWidget {
   final double width;
   final String title;
   final Function onTap;
+  final Color color;
 
   MyButton({
     @required this.height,
     @required this.title,
     @required this.width,
     this.onTap,
+    this.color,
   });
 
   @override
@@ -21,7 +23,7 @@ class MyButton extends StatelessWidget {
         height: this.height,
         width: this.width,
         decoration: BoxDecoration(
-            color: Theme.of(context).primaryColor,
+            color: color ?? Theme.of(context).primaryColor,
             borderRadius: BorderRadius.all(Radius.circular(50.0))),
         child: Center(
             child: Text(

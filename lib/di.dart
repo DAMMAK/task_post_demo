@@ -3,6 +3,8 @@ import 'package:demotask/modules/post/bloc/post_bloc.dart';
 import 'package:demotask/modules/post/model/post.dart';
 import 'package:demotask/modules/post/repository/post.repository.dart';
 import 'package:demotask/modules/post/service/post_service.dart';
+import 'package:demotask/modules/task/bloc/task_bloc.dart';
+import 'package:demotask/modules/task/service/task_service.dart';
 import 'package:get_it/get_it.dart';
 import 'package:hive/hive.dart';
 
@@ -16,4 +18,9 @@ Future<void> setupPostModuleService(GetIt ioc) async {
   // Register post repository
   var postBox = await Hive.openBox<Post>("posts");
   ioc.registerSingleton<PostRepository>(PostRepository(postBox));
+  // Register Task Bloc
+  ioc.registerSingleton<TaskBloc>(TaskBloc());
+
+  // Register Task Service
+  ioc.registerSingleton<TaskService>(TaskService());
 }

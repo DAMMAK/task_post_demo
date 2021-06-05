@@ -16,11 +16,11 @@ class FetchingTasks extends TaskState {
 
 // [FetchedPosts] is a loading state that got triggered when user's data has been successfully fetched
 class FetchedTasks extends TaskState {
-  final List<Task> task;
-  FetchedTasks({this.task});
+  final Stream<QuerySnapshot> tasks;
+  FetchedTasks({this.tasks});
 
   @override
-  List<Object> get props => [task];
+  List<Object> get props => [tasks];
 }
 
 // [FetchedPostsWithError] is a Error state that got triggered when the network request was not successful
@@ -50,6 +50,52 @@ class SavedTask extends TaskState {
 class SavedTaskWithError extends TaskState {
   final String message;
   SavedTaskWithError({this.message});
+
+  @override
+  List<Object> get props => [message];
+}
+
+// Update Task States
+
+// [UpdatingTask] is a loading state that emit when it's currently updating task into Firestore
+class UpdatingTask extends TaskState {
+  @override
+  List<Object> get props => [];
+}
+
+// [UpdatedTask] is a state that got triggered when task has been successfully updated on Firestore
+class TaskUpdated extends TaskState {
+  @override
+  List<Object> get props => [];
+}
+
+// [UpdatedWithError] is a Error state that got triggered when it returns error while updating to firestore
+class UpdatedWithError extends TaskState {
+  final String message;
+  UpdatedWithError({this.message});
+
+  @override
+  List<Object> get props => [message];
+}
+
+// Delete Task States
+
+// [DeletingTask] is a loading state that emit when it's currently deleting task into Firestore
+class DeletingTask extends TaskState {
+  @override
+  List<Object> get props => [];
+}
+
+// [UpdatedTask] is a state that got triggered when task has been successfully updated on Firestore
+class TaskDeleted extends TaskState {
+  @override
+  List<Object> get props => [];
+}
+
+// [UpdatedWithError] is a Error state that got triggered when it returns error while updating to firestore
+class DeletedWithError extends TaskState {
+  final String message;
+  DeletedWithError({this.message});
 
   @override
   List<Object> get props => [message];
