@@ -1,6 +1,6 @@
 import 'package:demotask/di.dart';
 import 'package:demotask/modules/post/model/post.dart';
-import 'package:demotask/modules/task/root.dart';
+import 'package:demotask/selection.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
@@ -24,9 +24,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: Scaffold(
-          // appBar: AppBar(title: Text("Post List")),
-          body: TaskRootWidget(),
-        ));
+        home: Selelction(),
+        );
   }
 }
