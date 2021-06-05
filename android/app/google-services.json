@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "244828660301",
+    "project_id": "todoapp-aeec3",
+    "storage_bucket": "todoapp-aeec3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:244828660301:android:cb7af41681070c896b7204",
+        "android_client_info": {
+          "package_name": "dev.dammak.demotask"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "244828660301-ncu1smpooisvogaskerne86uerv0krvh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnbMJY82VboEe-ATE92UfqOV2tQUeDPvg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "244828660301-ncu1smpooisvogaskerne86uerv0krvh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "244828660301-92j4mta81qslfs202s18jm4bpd3m5d6h.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "dev.dammak.demotask"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
